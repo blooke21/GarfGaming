@@ -19,7 +19,7 @@ export default function App() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/fZawhZZ_D5o?si=IAQ0biGXq1mF-pER?loop=1&autoplay=1&mute=1&modestbranding=1&controls=0&showinfo=0&rel=0&playlist=fZawhZZ_D5o"
+            src="https://www.youtube.com/embed/fZawhZZ_D5o?autoplay=1&mute=1&loop=1&playlist=fZawhZZ_D5o&modestbranding=1&controls=0&showinfo=0&rel=0"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
