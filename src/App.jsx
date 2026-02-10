@@ -14,7 +14,7 @@ export default function App() {
       </header>
 
       <main>
-        <p>We're still cooking! Stay tuned for updates.</p>
+        <p>We're still cooking! Stay tuned for updates. And lasagna</p>
         <div className="youtube-container">
           <iframe
             width="560"
