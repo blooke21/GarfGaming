@@ -1,1 +1,1 @@
-View mockup [here]([url](https://garfgaming.com/mockup.png))
+View mockup here ([https://garfgaming.com/mockup.png])
