@@ -1,7 +1,21 @@
-import React, { useState } from "react";
+import GameZone from "./components/GameZone"
+import React, { userState } from 'react'
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const storedDateString = localStorage.getItem("date");
+  const storedDate = storedDateString ? JSON.parse(storedDateString) : null;
+  const date = new Date();
+  let newDay = false;
+  
+  if(!storedDate || (storedDate.month !== date.getMonth() && storedDate.day !== date.getDate())){
+    newDay = true;
+    localStorage.setItem("date", JSON.stringify({
+      "month" : date.getMonth(),
+      "day" : date.getDate()
+  }));
+  }
+  
+  console.log("new day", newDay)
 
   return (
     <div className="app">
@@ -14,19 +28,9 @@ export default function App() {
       </header>
 
       <main>
-        <p>We're still cooking! Stay tuned for updates. And lasagna</p>
-        <div className="youtube-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/fZawhZZ_D5o?autoplay=1&mute=1&loop=1&playlist=fZawhZZ_D5o&modestbranding=1&controls=0&showinfo=0&rel=0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
+      <div>
+        <GameZone />
+      </div>
       </main>
 
       <footer></footer>
